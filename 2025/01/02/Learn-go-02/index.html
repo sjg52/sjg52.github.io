@@ -14,7 +14,7 @@
   
   
   <title>
-    Go语言基础之基本数据类型 |
+    02-Go语言基础之基本数据类型 |
     
     转生成蜘蛛子
   </title>
@@ -29,15 +29,15 @@
 
   
   
-    <meta name="description" content="来源是b站Go语言基础02 基本数据类型 Go语言中有丰富的数据类型，除了基本的整型、浮点型、布尔型、字符串外，还有数组、切片、结构体、函数、map、通道（channel）等。Go 语言的基本类型和其他语言大同小异。  基本数据类型  整型 整型分为以下两个大类： 按长度分为：int8、int16、int32、int64 对应的无符号整型：uint8、uint16、uint32、uint64 其中">
+    <meta name="description" content="来源是b站Go语言基础03 基本数据类型 Go语言中有丰富的数据类型，除了基本的整型、浮点型、布尔型、字符串外，还有数组、切片、结构体、函数、map、通道（channel）等。Go 语言的基本类型和其他语言大同小异。  基本数据类型  整型 整型分为以下两个大类： 按长度分为：int8、int16、int32、int64 对应的无符号整型：uint8、uint16、uint32、uint64 其中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Go语言基础之基本数据类型">
+<meta property="og:title" content="02-Go语言基础之基本数据类型">
 <meta property="og:url" content="http://example.com/2025/01/02/Learn-go-02/index.html">
 <meta property="og:site_name" content="转生成蜘蛛子">
-<meta property="og:description" content="来源是b站Go语言基础02 基本数据类型 Go语言中有丰富的数据类型，除了基本的整型、浮点型、布尔型、字符串外，还有数组、切片、结构体、函数、map、通道（channel）等。Go 语言的基本类型和其他语言大同小异。  基本数据类型  整型 整型分为以下两个大类： 按长度分为：int8、int16、int32、int64 对应的无符号整型：uint8、uint16、uint32、uint64 其中">
+<meta property="og:description" content="来源是b站Go语言基础03 基本数据类型 Go语言中有丰富的数据类型，除了基本的整型、浮点型、布尔型、字符串外，还有数组、切片、结构体、函数、map、通道（channel）等。Go 语言的基本类型和其他语言大同小异。  基本数据类型  整型 整型分为以下两个大类： 按长度分为：int8、int16、int32、int64 对应的无符号整型：uint8、uint16、uint32、uint64 其中">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-01-02T16:44:51.297Z">
+<meta property="article:modified_time" content="2025-01-03T07:21:33.610Z">
 <meta property="article:author" content="蜘蛛子">
 <meta property="article:tag" content="Golang">
 <meta name="twitter:card" content="summary">
@@ -159,7 +159,7 @@
         
           <source media="(min-width: 800px)" srcset="/images/tiantai.png">
         
-        <img fetchpriority="high" src="/images/tiantai.png" alt="Go语言基础之基本数据类型">
+        <img fetchpriority="high" src="/images/tiantai.png" alt="02-Go语言基础之基本数据类型">
       </picture>
     
   
@@ -169,7 +169,7 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">Go语言基础之基本数据类型</h1>
+            <h1 data-aos="slide-up">02-Go语言基础之基本数据类型</h1>
           </a>
         
       
@@ -206,7 +206,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">3</div>
+    <div class="sidebar-state-number">5</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
@@ -281,68 +281,76 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <p>来源是b站<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qb411M785?spm_id_from=333.788.videopod.sections&amp;vd_source=d327742890f6b7694d0a202635037cec">Go语言基础02 基本数据类型</a></p>
+        <p>来源是b站<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qb411M785?spm_id_from=333.788.videopod.sections&amp;vd_source=d327742890f6b7694d0a202635037cec">Go语言基础03 基本数据类型</a></p>
 <p>Go语言中有丰富的数据类型，除了基本的整型、浮点型、布尔型、字符串外，还有数组、切片、结构体、函数、map、通道（channel）等。Go 语言的基本类型和其他语言大同小异。</p>
 <h2 id="基本数据类型"><a class="markdownIt-Anchor" href="#基本数据类型"></a> 基本数据类型</h2>
 <h3 id="整型"><a class="markdownIt-Anchor" href="#整型"></a> 整型</h3>
 <p>整型分为以下两个大类： 按长度分为：int8、int16、int32、int64 对应的无符号整型：uint8、uint16、uint32、uint64</p>
 <p>其中，<code>uint8</code>就是我们熟知的<code>byte</code>型，<code>int16</code>对应C语言中的<code>short</code>型，<code>int64</code>对应C语言中的<code>long</code>型。</p>
 <table>
-    <tr>
-        <th>类型</th>
-        <th>描述</th>
-    </tr>
-    <tr>
-        <th>uint8</th>
-        <th>无符号 8位整型 (0 到 255)</th>
-    </tr>
-    <tr>
-        <th>uint16</th>
-        <th>无符号 16位整型 (0 到 65535)</th>
-    </tr>
-    <tr>
-        <th>uint32</th>
-        <th>无符号 32位整型 (0 到 4294967295)</th>
-    </tr>
-    <tr>
-        <th>uint64</th>
-        <th>无符号 64位整型 (0 到 18446744073709551615)</th>
-    </tr>
-    <tr>
-        <th>int8</th>
-        <th>有符号 8位整型 (-128 到 127)</th>
-    </tr>
-    <tr>
-        <th>int16</th>
-        <th>有符号 16位整型 (-32768 到 32767)</th>
-    </tr>
-    <tr>
-        <th>int32</th>
-        <th>有符号 32位整型 (-2147483648 到 2147483647)</th>
-    </tr>
-    <tr>
-        <th>int64</th>
-        <th>有符号 64位整型 (-9223372036854775808 到 9223372036854775807)</th>
-    </tr>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uint8</td>
+<td>无符号 8位整型 (0 到 255)</td>
+</tr>
+<tr>
+<td>uint16</td>
+<td>无符号 16位整型 (0 到 65535)</td>
+</tr>
+<tr>
+<td>uint32</td>
+<td>无符号 32位整型 (0 到 4294967295)</td>
+</tr>
+<tr>
+<td>uint64</td>
+<td>无符号 64位整型 (0 到 18446744073709551615)</td>
+</tr>
+<tr>
+<td>int8</td>
+<td>有符号 8位整型 (-128 到 127)</td>
+</tr>
+<tr>
+<td>int16</td>
+<td>有符号 16位整型 (-32768 到 32767)</td>
+</tr>
+<tr>
+<td>int32</td>
+<td>有符号 32位整型 (-2147483648 到 2147483647)</td>
+</tr>
+<tr>
+<td>int64</td>
+<td>有符号 64位整型 (-9223372036854775808 到 9223372036854775807)</td>
+</tr>
+</tbody>
 </table>
 <h4 id="特殊整型"><a class="markdownIt-Anchor" href="#特殊整型"></a> 特殊整型</h4>
 <table>
-    <tr>
-        <th>类型</th>
-        <th>描述</th>
-    </tr>
-    <tr>
-        <th>uint</th>
-        <th>32位操作系统上就是uint32，64位操作系统上就是uint64</th>
-    </tr>
-    <tr>
-        <th>int</th>
-        <th>32位操作系统上就是int32，64位操作系统上就是int64</th>
-    </tr>
-    <tr>
-        <th>uintptr</th>
-        <th>无符号整型，用于存放一个指针</th>
-    </tr>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uint</td>
+<td>32位操作系统上就是uint32，64位操作系统上就是uint64</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32位操作系统上就是int32，64位操作系统上就是int64</td>
+</tr>
+<tr>
+<td>uintptr</td>
+<td>无符号整型，用于存放一个指针</td>
+</tr>
+</tbody>
 </table>
 <ul>
 <li>
@@ -382,34 +390,38 @@
 <h4 id="字符串转义符"><a class="markdownIt-Anchor" href="#字符串转义符"></a> 字符串转义符</h4>
 <p>Go 语言的字符串常见转义符包含回车、换行、单双引号、制表符等，如下表所示。</p>
 <table>
-    <tr>
-        <th>转义符</th>
-        <th>含义</th>
-    </tr>
-    <tr>
-        <th>\r</th>
-        <th>回车符（返回行首）</th>
-    </tr>
-    <tr>
-        <th>\n</th>
-        <th>换行符（直接跳到下一行的同列位置）</th>
-    </tr>
-    <tr>
-        <th>\t</th>
-        <th>制表符</th>
-    </tr>
-    <tr>
-        <th>\'</th>
-        <th>单引号</th>
-    </tr>
-    <tr>
-        <th>\"</th>
-        <th>双引号</th>
-    </tr>
-    <tr>
-        <th>\\</th>
-        <th>反斜杠</th>
-    </tr>
+<thead>
+<tr>
+<th>转义符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\r</td>
+<td>回车符（返回行首）</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行符（直接跳到下一行的同列位置）</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>制表符</td>
+</tr>
+<tr>
+<td>'</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>&quot;</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>反斜杠</td>
+</tr>
+</tbody>
 </table>
 <p>举个例子，我们要打印一个Windows平台下的一个文件路径：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import (</span><br><span class="line">    &quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line">func main() &#123;</span><br><span class="line">    fmt.Println(&quot;str := \&quot;c:\\Code\\lesson1\\go.exe\&quot;&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -419,38 +431,42 @@
 <p>反引号间换行将被作为字符串中的换行，但是所有的转义字符均无效，文本将会原样输出。</p>
 <h4 id="字符串的常用操作"><a class="markdownIt-Anchor" href="#字符串的常用操作"></a> 字符串的常用操作</h4>
 <table>
-    <tr>
-        <th>方法</th>
-        <th>介绍</th>
-    </tr>
-    <tr>
-        <th>len(str)</th>
-        <th>求长度</th>
-    </tr>
-    <tr>
-        <th>+或fmt.Sprintf</th>
-        <th>拼接字符串</th>
-    </tr>
-    <tr>
-        <th>strings.Split</th>
-        <th>分割</th>
-    </tr>
-    <tr>
-        <th>strings.contains</th>
-        <th>判断是否包含</th>
-    </tr>
-    <tr>
-        <th>strings.HasPrefix,strings.HasSuffix</th>
-        <th>前缀/后缀判断</th>
-    </tr>
-    <tr>
-        <th>strings.Index(),strings.LastIndex()</th>
-        <th>子串出现的位置</th>
-    </tr>
-    <tr>
-        <th>strings.Join(a[]string, sep string)</th>
-        <th>join操作</th>
-    </tr>
+<thead>
+<tr>
+<th>方法</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>len(str)</td>
+<td>求长度</td>
+</tr>
+<tr>
+<td>+或fmt.Sprintf</td>
+<td>拼接字符串</td>
+</tr>
+<tr>
+<td>strings.Split</td>
+<td>分割</td>
+</tr>
+<tr>
+<td>strings.contains</td>
+<td>判断是否包含</td>
+</tr>
+<tr>
+<td>strings.HasPrefix,strings.HasSuffix</td>
+<td>前缀/后缀判断</td>
+</tr>
+<tr>
+<td>strings.Index(),strings.LastIndex()</td>
+<td>子串出现的位置</td>
+</tr>
+<tr>
+<td>strings.Join(a[]string, sep string)</td>
+<td>join操作</td>
+</tr>
+</tbody>
 </table>
 <h3 id="byte和rune类型"><a class="markdownIt-Anchor" href="#byte和rune类型"></a> byte和rune类型</h3>
 <p>组成每个字符串的元素叫做“字符”，可以通过遍历或者单个获取字符串元素获得字符。 字符用单引号（’）包裹起来，如：</p>
@@ -506,14 +522,14 @@
         
           
           
-            <img data-src="/covers/jiaotang.png" data-sizes="auto" alt="Go语言基础之变量和常量" class="lazyload">
+            <img data-src="/covers/jiaotang.png" data-sizes="auto" alt="03-Go语言基础之运算符" class="lazyload">
           
         
-        <a href="/2025/01/02/Learn-go-01/"></a>
+        <a href="/2025/01/03/Learn-go-03/"></a>
         <div class="article-nav-caption">前一篇</div>
         <h3 class="article-nav-title">
           
-            Go语言基础之变量和常量
+            03-Go语言基础之运算符
           
         </h3>
       </div>
@@ -523,14 +539,14 @@
       
         
         
-          <img data-src="/covers/jiaotang.png" data-sizes="auto" alt="记录学习前端开发的第一篇笔记" class="lazyload">
+          <img data-src="/covers/jiaotang.png" data-sizes="auto" alt="01-Go语言基础之变量和常量" class="lazyload">
         
       
-      <a href="/2024/11/28/Learn-html/"></a>
+      <a href="/2025/01/01/Learn-go-01/"></a>
       <div class="article-nav-caption">后一篇</div>
       <h3 class="article-nav-title">
         
-          记录学习前端开发的第一篇笔记
+          01-Go语言基础之变量和常量
         
       </h3>
     </div>
@@ -569,10 +585,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        4.2k
+        6.5k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:15
+        00:24
       </div>
     
     
@@ -615,7 +631,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">3</div>
+    <div class="sidebar-state-number">5</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
