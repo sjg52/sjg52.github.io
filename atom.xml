@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-01-03T07:40:54.532Z</updated>
+  <updated>2025-03-14T14:26:52.490Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>01-Selenium网页自动化测试脚本笔记</title>
+    <link href="http://example.com/2025/03/14/Learn-selenium-01/"/>
+    <id>http://example.com/2025/03/14/Learn-selenium-01/</id>
+    <published>2025-03-13T16:00:00.000Z</published>
+    <updated>2025-03-14T14:26:52.490Z</updated>
+    
+    <content type="html"><![CDATA[<p>来源是b站<a href="https://www.bilibili.com/video/BV1Y9UPYAEqN?spm_id_from=333.788.videopod.episodes&amp;vd_source=d327742890f6b7694d0a202635037cec">2025最新Selenium教程(Python 网页自动化测试脚本)</a></p><p>三方库：Selenium<br />什么是自动化：<br />自动化是指使用技术手段模拟人工，执行重复性任务。准确性100%</p><p>自动化应用场景：</p><ol><li>自动化测试</li><li>自动化运维</li><li>自动化办公</li><li>自动化游戏</li></ol><p>Selenium</p><ul><li>web自动化中的老牌指名开源库</li><li>支持多种浏览器：谷歌Chrome、火狐Firefox、微软Edge、苹果Safari等</li><li>跨平台、兼容性高</li><li>通过浏览器驱动控制浏览器，通过元素定位模拟人工交互以实现web自动化（无焦点状态依然执行）</li></ul><p>官方技术文档<br /><a href="https://www.selenium.dev/">https://www.selenium.dev/</a></p><p>本笔记内容：</p><ul><li>Selenium库的所有常用语句和功能</li><li>浏览器配置、元素定位、元素交互</li><li>多种web场景下的案例、多线程执行（多开）等等</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;来源是b站&lt;a href=&quot;https://www.bilibili.com/video/BV1Y9UPYAEqN?spm_id_from=333.788.videopod.episodes&amp;amp;vd_source=d327742890f6b7694d0a2026350</summary>
+      
+    
+    
+    
+    
+    <category term="Selenium" scheme="http://example.com/tags/Selenium/"/>
+    
+  </entry>
   
   <entry>
     <title>04-Go语言基础之流程控制</title>
@@ -107,8 +129,8 @@
   
   <entry>
     <title>记录学习前端开发的第一篇笔记</title>
-    <link href="http://example.com/2024/11/28/Learn-html/"/>
-    <id>http://example.com/2024/11/28/Learn-html/</id>
+    <link href="http://example.com/2024/11/28/Learn-html-01/"/>
+    <id>http://example.com/2024/11/28/Learn-html-01/</id>
     <published>2024-11-27T16:00:00.000Z</published>
     <updated>2025-01-02T15:24:21.762Z</updated>
     
