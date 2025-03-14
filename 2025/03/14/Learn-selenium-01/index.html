@@ -29,15 +29,15 @@
 
   
   
-    <meta name="description" content="来源是b站2025最新Selenium教程(Python 网页自动化测试脚本) 三方库：Selenium 什么是自动化： 自动化是指使用技术手段模拟人工，执行重复性任务。准确性100% 自动化应用场景：  自动化测试 自动化运维 自动化办公 自动化游戏  Selenium  web自动化中的老牌指名开源库 支持多种浏览器：谷歌Chrome、火狐Firefox、微软Edge、苹果Safari等 跨平">
+    <meta name="description" content="来源是b站2025最新Selenium教程(Python 网页自动化测试脚本)  前言 三方库：Selenium 什么是自动化： 自动化是指使用技术手段模拟人工，执行重复性任务。准确性100% 自动化应用场景：  自动化测试 自动化运维 自动化办公 自动化游戏  Selenium  web自动化中的老牌指名开源库 支持多种浏览器：谷歌Chrome、火狐Firefox、微软Edge、苹果Safari">
 <meta property="og:type" content="article">
 <meta property="og:title" content="01-Selenium网页自动化测试脚本笔记">
 <meta property="og:url" content="http://example.com/2025/03/14/Learn-selenium-01/index.html">
 <meta property="og:site_name" content="转生成蜘蛛子">
-<meta property="og:description" content="来源是b站2025最新Selenium教程(Python 网页自动化测试脚本) 三方库：Selenium 什么是自动化： 自动化是指使用技术手段模拟人工，执行重复性任务。准确性100% 自动化应用场景：  自动化测试 自动化运维 自动化办公 自动化游戏  Selenium  web自动化中的老牌指名开源库 支持多种浏览器：谷歌Chrome、火狐Firefox、微软Edge、苹果Safari等 跨平">
+<meta property="og:description" content="来源是b站2025最新Selenium教程(Python 网页自动化测试脚本)  前言 三方库：Selenium 什么是自动化： 自动化是指使用技术手段模拟人工，执行重复性任务。准确性100% 自动化应用场景：  自动化测试 自动化运维 自动化办公 自动化游戏  Selenium  web自动化中的老牌指名开源库 支持多种浏览器：谷歌Chrome、火狐Firefox、微软Edge、苹果Safari">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-03-14T14:26:52.490Z">
+<meta property="article:modified_time" content="2025-03-14T17:30:05.764Z">
 <meta property="article:author" content="蜘蛛子">
 <meta property="article:tag" content="Selenium">
 <meta name="twitter:card" content="summary">
@@ -193,7 +193,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#selenium%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text"> Selenium环境安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text"> 设置浏览器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%8C%85"><span class="toc-number">3.1.</span> <span class="toc-text"> 导包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text"> 设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">3.3.</span> <span class="toc-text"> 基本操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D"><span class="toc-number">3.4.</span> <span class="toc-text"> 元素定位</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E4%BA%A4%E4%BA%92%E6%93%8D%E4%BD%9C"><span class="toc-number">3.4.1.</span> <span class="toc-text"> 元素交互操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-id"><span class="toc-number">3.4.2.</span> <span class="toc-text"> 元素定位-ID</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-name"><span class="toc-number">3.4.3.</span> <span class="toc-text"> 元素定位-NAME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-class_name"><span class="toc-number">3.4.4.</span> <span class="toc-text"> 元素定位-CLASS_NAME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-tag_name"><span class="toc-number">3.4.5.</span> <span class="toc-text"> 元素定位-TAG_NAME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-link_text"><span class="toc-number">3.4.6.</span> <span class="toc-text"> 元素定位-LINK_TEXT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-partial_link_text"><span class="toc-number">3.4.7.</span> <span class="toc-text"> 元素定位-PARTIAL_LINK_TEXT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-css_selector"><span class="toc-number">3.4.8.</span> <span class="toc-text"> 元素定位-CSS_SELECTOR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-xpath"><span class="toc-number">3.4.9.</span> <span class="toc-text"> 元素定位-XPATH</span></a></li></ol></li></ol></li></ol>
       
   </div>
 </div>
@@ -268,7 +268,7 @@
       <div class="article-date">
   <a href="/2025/03/14/Learn-selenium-01/" class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-03-13T16:00:00.000Z" itemprop="datePublished">2025-03-14</time>
-    <time style="display: none;" id="post-update-time">2025-03-14</time>
+    <time style="display: none;" id="post-update-time">2025-03-15</time>
   </a>
 </div>
 
@@ -282,6 +282,7 @@
       
       
         <p>来源是b站<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Y9UPYAEqN?spm_id_from=333.788.videopod.episodes&amp;vd_source=d327742890f6b7694d0a202635037cec">2025最新Selenium教程(Python 网页自动化测试脚本)</a></p>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>三方库：Selenium<br />
 什么是自动化：<br />
 自动化是指使用技术手段模拟人工，执行重复性任务。准确性100%</p>
@@ -307,6 +308,80 @@
 <li>浏览器配置、元素定位、元素交互</li>
 <li>多种web场景下的案例、多线程执行（多开）等等</li>
 </ul>
+<h2 id="selenium环境安装"><a class="markdownIt-Anchor" href="#selenium环境安装"></a> Selenium环境安装</h2>
+<ol>
+<li>谷歌Chrome浏览器右上角…-帮助-关于，确认浏览器版本</li>
+<li>安装浏览器驱动，驱动的版本号要和浏览器的版本号对应符合（至少大版本号要一致）。<br />
+官方最新驱动下载地址：<a target="_blank" rel="noopener" href="https://googlechromelabs.github.io/chrome-for-testing/">https://googlechromelabs.github.io/chrome-for-testing/</a></li>
+<li>把驱动的exe文件放在项目的根目录下</li>
+<li>安装三方库，在终端中执行</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure>
+<p>在后面加’==3.141.0’（版本号）就是指定版本下载</p>
+<h2 id="设置浏览器"><a class="markdownIt-Anchor" href="#设置浏览器"></a> 设置浏览器</h2>
+<h3 id="导包"><a class="markdownIt-Anchor" href="#导包"></a> 导包</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from selenium import webdriver  # 用于操作浏览器</span><br><span class="line">from selenium.webdriver.chrome.options import Options   # 用于设置谷歌浏览器</span><br><span class="line">from selenium.webdriver.chrome.webdriver import Service # 用于管理谷歌的驱动</span><br><span class="line">from selenium.webdriver.common.by import By # 用于元素定位</span><br></pre></td></tr></table></figure>
+<h3 id="设置"><a class="markdownIt-Anchor" href="#设置"></a> 设置</h3>
+<p>创建设置浏览器对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">q1 = Options()</span><br></pre></td></tr></table></figure>
+<p>禁用沙盒模式，如果浏览器闪退就使用这句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">driver.add_argument(&#x27;--no-sandbox&#x27;)</span><br></pre></td></tr></table></figure>
+<p>保持浏览器打开状态（默认是代码执行完毕自动关闭）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">q1.add_experimental_option(&#x27;detach&#x27;,True)</span><br></pre></td></tr></table></figure>
+<p>创建并启动浏览器，所以浏览器的驱动器要放在根目录下，不写绝对路径就自动在根目录下查找</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1 = webdriver.Chrome(service=Service(&#x27;chromedriver.exe&#x27;), options=q1)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>上面三的导包和设置写好放在那里不用动就行</li>
+</ul>
+<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
+<p>打开网址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.get(&quot;https://baidu.com&quot;)</span><br></pre></td></tr></table></figure>
+<p>等待时间</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">time.sleep(2)</span><br></pre></td></tr></table></figure>
+<p>关闭当前标签页</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.close()</span><br></pre></td></tr></table></figure>
+<p>退出浏览器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.quit()</span><br></pre></td></tr></table></figure>
+<p>浏览器打开位置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a1.set_window_position(0,0)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>浏览器打开尺寸</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.set_window_size(600,600)</span><br></pre></td></tr></table></figure>
+<p>浏览器最大化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.maximize_window()</span><br></pre></td></tr></table></figure>
+<p>浏览器最小化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.minimize_window()</span><br></pre></td></tr></table></figure>
+<p>浏览器截图</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.get_screenshot_as_file(&#x27;1.png&#x27;)</span><br></pre></td></tr></table></figure>
+<p>刷新当前网页</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.refresh()</span><br></pre></td></tr></table></figure>
+<h3 id="元素定位"><a class="markdownIt-Anchor" href="#元素定位"></a> 元素定位</h3>
+<p>定位一个元素 <code>find_element</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a2 = a1.find_element(By.ID,&#x27;kw&#x27;)</span><br></pre></td></tr></table></figure>
+<p>定位多个元素 <code>find_elements</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a2 = a1.find_elements(By.ID,&#x27;kw&#x27;)</span><br></pre></td></tr></table></figure>
+<p>在浏览器查找多个元素，在控制台输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&#x27;元素值&#x27;)</span><br></pre></td></tr></table></figure>
+<p>元素定位导包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from selenium.webdriver.common.by import By</span><br></pre></td></tr></table></figure>
+<h4 id="元素交互操作"><a class="markdownIt-Anchor" href="#元素交互操作"></a> 元素交互操作</h4>
+<ul>
+<li>元素点击 <code>click()</code></li>
+<li>元素输入 <code>send_keys('')</code></li>
+<li>元素清空 <code>clear()</code></li>
+</ul>
+<h4 id="元素定位-id"><a class="markdownIt-Anchor" href="#元素定位-id"></a> 元素定位-ID</h4>
+<ol>
+<li>通过ID定位元素，一般比较准确。</li>
+<li>并不是所有网页或者元素都有ID值</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a1.find_element(By.ID,&#x27;kw&#x27;).send_keys(&#x27;输入的文字&#x27;)</span><br></pre></td></tr></table></figure>
+<h4 id="元素定位-name"><a class="markdownIt-Anchor" href="#元素定位-name"></a> 元素定位-NAME</h4>
+<h4 id="元素定位-class_name"><a class="markdownIt-Anchor" href="#元素定位-class_name"></a> 元素定位-CLASS_NAME</h4>
+<h4 id="元素定位-tag_name"><a class="markdownIt-Anchor" href="#元素定位-tag_name"></a> 元素定位-TAG_NAME</h4>
+<h4 id="元素定位-link_text"><a class="markdownIt-Anchor" href="#元素定位-link_text"></a> 元素定位-LINK_TEXT</h4>
+<h4 id="元素定位-partial_link_text"><a class="markdownIt-Anchor" href="#元素定位-partial_link_text"></a> 元素定位-PARTIAL_LINK_TEXT</h4>
+<h4 id="元素定位-css_selector"><a class="markdownIt-Anchor" href="#元素定位-css_selector"></a> 元素定位-CSS_SELECTOR</h4>
+<h4 id="元素定位-xpath"><a class="markdownIt-Anchor" href="#元素定位-xpath"></a> 元素定位-XPATH</h4>
 
       
     </div>
@@ -378,10 +453,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        6.7k
+        7.3k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:25
+        00:27
       </div>
     
     
@@ -411,7 +486,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#selenium%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text"> Selenium环境安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text"> 设置浏览器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%8C%85"><span class="toc-number">3.1.</span> <span class="toc-text"> 导包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text"> 设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">3.3.</span> <span class="toc-text"> 基本操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D"><span class="toc-number">3.4.</span> <span class="toc-text"> 元素定位</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E4%BA%A4%E4%BA%92%E6%93%8D%E4%BD%9C"><span class="toc-number">3.4.1.</span> <span class="toc-text"> 元素交互操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-id"><span class="toc-number">3.4.2.</span> <span class="toc-text"> 元素定位-ID</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-name"><span class="toc-number">3.4.3.</span> <span class="toc-text"> 元素定位-NAME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-class_name"><span class="toc-number">3.4.4.</span> <span class="toc-text"> 元素定位-CLASS_NAME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-tag_name"><span class="toc-number">3.4.5.</span> <span class="toc-text"> 元素定位-TAG_NAME</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-link_text"><span class="toc-number">3.4.6.</span> <span class="toc-text"> 元素定位-LINK_TEXT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-partial_link_text"><span class="toc-number">3.4.7.</span> <span class="toc-text"> 元素定位-PARTIAL_LINK_TEXT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-css_selector"><span class="toc-number">3.4.8.</span> <span class="toc-text"> 元素定位-CSS_SELECTOR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-xpath"><span class="toc-number">3.4.9.</span> <span class="toc-text"> 元素定位-XPATH</span></a></li></ol></li></ol></li></ol>
       
   </div>
 </div>
