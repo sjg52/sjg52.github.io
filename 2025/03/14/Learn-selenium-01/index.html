@@ -1,7 +1,12 @@
 
   <!DOCTYPE html>
-  <html lang="zh-CN"  >
+  <html lang="zh-CN"  
+    
+      data-theme-mode="auto"
+    
+  >
   <head>
+  
   <meta charset="utf-8">
   
 
@@ -9,9 +14,7 @@
 
   
 
-  
-  <script>window.icon_font = '4552607_tq6stt6tcg';window.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};</script>
-  
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":true,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';</script>
   
   <title>
     01-Selenium网页自动化测试脚本笔记 |
@@ -21,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
   
-    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_0khxww3tj3q9.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   
   
     
@@ -46,7 +49,7 @@
     <link rel="alternate" href="/atom.xml" title="转生成蜘蛛子" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="shortcut icon" href="/images/%E5%B0%8F%E5%8E%A8%E5%B8%88.jpg">
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -65,20 +68,29 @@
 <link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
 
   
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css">
+
+  
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
   <body>
+    
     
   <div id='loader'>
     <div class="loading-left-bg loading-bg"></div>
     <div class="loading-right-bg loading-bg"></div>
     <div class="spinner-box">
       <div class="loading-taichi">
-        <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-          <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
-          <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
-         M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
-        </svg>
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
       </div>
       <div class="loading-word">少女祈祷中...</div>
     </div>
@@ -118,25 +130,35 @@
         <div id="header-nav">
   <nav id="main-nav">
     
-      <span class="main-nav-link-wrap">
-        <div class="main-nav-icon icon-taichi"></div>
-        <a class="main-nav-link" href="/">首页</a>
-      </span>
-    
-      <span class="main-nav-link-wrap">
-        <div class="main-nav-icon icon-taichi"></div>
-        <a class="main-nav-link" href="/archives">归档</a>
-      </span>
-    
-      <span class="main-nav-link-wrap">
-        <div class="main-nav-icon icon-taichi"></div>
-        <a class="main-nav-link" href="/about">关于</a>
-      </span>
-    
-      <span class="main-nav-link-wrap">
-        <div class="main-nav-icon icon-taichi"></div>
-        <a class="main-nav-link" href="/friend">友链</a>
-      </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/">首页</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/archives">归档</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/about">关于</a>
+        </span>
+      
+        <span class="main-nav-link-wrap">
+          <div class="main-nav-icon icon rotate">
+            &#xe62b;
+          </div>
+          <a class="main-nav-link" href="/friend">友链</a>
+        </span>
+      
     
     <a id="main-nav-toggle" class="nav-icon"></a>
   </nav>
@@ -147,20 +169,19 @@
     
     
   </nav>
+  
 </div>
 <header id="header">
   
     
-      <picture>
+      
+        <picture>
+          
+        </picture>
         
-          <source media="(max-width: 479px)" srcset="/images/tiantai.png">
+          <img  fetchpriority="high" src="/images/tiantai.png" alt="01-Selenium网页自动化测试脚本笔记">
         
-          <source media="(max-width: 799px)" srcset="/images/tiantai.png">
-        
-          <source media="(min-width: 800px)" srcset="/images/tiantai.png">
-        
-        <img fetchpriority="high" src="/images/tiantai.png" alt="01-Selenium网页自动化测试脚本笔记">
-      </picture>
+      
     
   
   <div id="header-outer">
@@ -183,13 +204,33 @@
   </div>
 </header>
 
-        <div id="content">
-          
-            <aside id="sidebar">
+        <div id="content"  class="sidebar-right" >
+          <aside id="sidebar">
+  
+  
+  
+    <meting-js
+      theme="var(--color-link)"
+      id="13495215520"
+      server="netease"
+      type="playlist"
+      
+      
+      autoplay="true"
+      loop="all"
+      order="random"
+      
+      
+      
+      
+      
+    ></meting-js>
+  
   <div class="sidebar-wrapper wrap-sticky">
     <div class="sidebar-wrap" data-aos="fade-up">
       
-        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+        
+          <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
@@ -198,7 +239,7 @@
   </div>
 </div>
 </div>
-        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/touxiang01.png" data-sizes="auto" alt="蜘蛛子" class="lazyload">
   <div class="sidebar-author-name">蜘蛛子</div>
   <div class="sidebar-description"></div>
@@ -222,54 +263,69 @@
 </div>
 <div class="sidebar-menu">
   
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
-      <div class="sidebar-menu-icon icon-taichi"></div>
-      <div class="sidebar-menu-link">首页</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
-      <div class="sidebar-menu-icon icon-taichi"></div>
-      <div class="sidebar-menu-link">归档</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
-      <div class="sidebar-menu-icon icon-taichi"></div>
-      <div class="sidebar-menu-link">关于</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
-      <div class="sidebar-menu-icon icon-taichi"></div>
-      <div class="sidebar-menu-link">友链</div>
-    </div>
-  
-</div>
-</div>
-      
-      
-        <div class="sidebar-btn-wrapper" style="position:static">
-          <div class="sidebar-toc-btn current"></div>
-          <div class="sidebar-common-btn"></div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
         </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+    
+  
+</div>
+</div>
+        
+      
+      
+        
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+        
       
     </div>
   </div>
 
+  <div class="sidebar-widget">
+  
+  </div>
   
 </aside>
 
-          
           <section id="main"><article id="post-Learn-selenium-01" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
-  <a href="/2025/03/14/Learn-selenium-01/" class="article-date-link" data-aos="zoom-in">
+  <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-03-13T16:00:00.000Z" itemprop="datePublished">2025-03-14</time>
     <time style="display: none;" id="post-update-time">2025-03-16</time>
-  </a>
+  </span>
 </div>
 
       
@@ -448,6 +504,31 @@
     <footer class="article-footer">
       
       
+        <div class="sponsor-wrapper">
+  <div class="sponsor-button-wrapper">
+    <div class="sponsor-icon rotate"></div>
+    <div class="sponsor-title">赞助</div>
+    <div class="sponsor-icon rotate"></div>
+  </div>
+  <div class="sponsor-tip">请作者喝杯咖啡吧！</div>
+  
+    <div class="sponsor-qr">
+      
+        <div class="sponsor-qr-image-wrapper">
+          <img src="/sponsor/alipay.png" alt=支付宝 width="200" />
+          <p class="sponsor-qr-name">支付宝</p>
+        </div>
+      
+        <div class="sponsor-qr-image-wrapper">
+          <img src="/sponsor/wechat.png" alt=微信 width="200" />
+          <p class="sponsor-qr-name">微信</p>
+        </div>
+      
+    </div>
+  
+</div>
+      
+      
       
       
       
@@ -461,6 +542,7 @@
   </div>
   
   <nav id="article-nav" data-aos="fade-up">
+    
     
     
     <div class="article-nav-link-wrap article-nav-link-right">
@@ -490,8 +572,9 @@
 
 
 </section>
-          
         </div>
+        
+        
         <footer id="footer">
   <div style="width: 100%; overflow: hidden">
     <div class="footer-line"></div>
@@ -501,7 +584,7 @@
     <div>
       <span class="icon-copyright"></span>
       2020-2025
-      <span class="footer-info-sep"></span>
+      <span class="footer-info-sep rotate"></span>
       蜘蛛子
     </div>
     
@@ -533,16 +616,19 @@
   </div>
 </footer>
 
-        <div class="sidebar-top">
-          <div class="sidebar-top-taichi"></div>
-          <div class="arrow-up"></div>
-        </div>
-        <div id="mask"></div>
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
       </div>
       <nav id="mobile-nav">
   <div class="sidebar-wrap">
     
-      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
@@ -551,7 +637,7 @@
   </div>
 </div>
 </div>
-      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/touxiang01.png" data-sizes="auto" alt="蜘蛛子" class="lazyload">
   <div class="sidebar-author-name">蜘蛛子</div>
   <div class="sidebar-description"></div>
@@ -575,39 +661,52 @@
 </div>
 <div class="sidebar-menu">
   
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
-      <div class="sidebar-menu-icon icon-taichi"></div>
-      <div class="sidebar-menu-link">首页</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
-      <div class="sidebar-menu-icon icon-taichi"></div>
-      <div class="sidebar-menu-link">归档</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
-      <div class="sidebar-menu-icon icon-taichi"></div>
-      <div class="sidebar-menu-link">关于</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
-      <div class="sidebar-menu-icon icon-taichi"></div>
-      <div class="sidebar-menu-link">友链</div>
-    </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+    
   
 </div>
 </div>
+      
     
   </div>
   
-    <div class="sidebar-btn-wrapper">
-      <div class="sidebar-toc-btn current"></div>
-      <div class="sidebar-common-btn"></div>
-    </div>
+    
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+    
   
 </nav>
 
@@ -618,6 +717,8 @@
 
 
 <script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
 
 
 
@@ -655,11 +756,13 @@
 
 
   
-<script src="https://npm.webcache.cn/mouse-firework@0.0.6/dist/index.umd.js" integrity="sha384-vkGvf25gm1C1PbcoD5dNfc137HzNL&#x2F;hr1RKA5HniJOaawtvUmH5lTVFgFAruE9Ge" crossorigin="anonymous"></script>
+<script src="https://npm.webcache.cn/mouse-firework@0.1.1/dist/index.umd.js" integrity="sha384-8LyaidD9GPxQQgLJO&#x2F;WRw&#x2F;O2h3BoNq&#x2F;ApI&#x2F;ecpvM6RsrCz2qP2ppBXUKihP4V&#x2F;2d" crossorigin="anonymous"></script>
 
   <script>
-    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
   </script>
+
+
 
 
 
@@ -671,11 +774,29 @@
 <div id="lazy-script">
   <div>
     
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "蜘蛛子",
+          title: "01-Selenium网页自动化测试脚本笔记",
+          url: "http://example.com/2025/03/14/Learn-selenium-01/",
+          excerpt: "",
+          description: "",
+          stripContent: "来源是b站2025最新Selenium教程(Python 网页自动化测试脚本)  前言 三方库：Selenium 什么是自动化： 自动化是指使用技术手段模拟人工，执行重复性任务。准确性100% 自动化应用场景：  自动化测试 自动化运维 自动化办公 自动化游戏  Selenium  web自动化中的老牌指名开源库 支持多种浏览器：谷歌Chrome、火狐Firefox、微软Edge、苹果Safari等 跨平台、兼容性高 通过浏览器驱动控制浏览器，通过元素定位模拟人工交互以实现web自动化（无焦点状",
+          date: "Fri Mar 14 2025 00:00:00 GMT+0800",
+          updated: "Sun Mar 16 2025 01:13:12 GMT+0800",
+          cover: "/images/tiantai.png",
+        };
+      </script>
+       
+    
     
       
         
 <script src="/js/insert_highlight.js" data-pjax></script>
 
+        
       
     
     
@@ -729,7 +850,7 @@
   \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
                                                   
 `,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '0.3.5' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.6.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
   </script>
   
 
@@ -751,6 +872,25 @@
   }
 </script>
 
+
+
+
+
+  
+<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script>
+
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js" integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8+0maanw1S&#x2F;IyB+Y4JG+ZDU7GpKE8" crossorigin="anonymous"></script>
+
+  
+
+
+
+    
   </body>
   </html>
 
