@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-03-15T17:13:12.396Z</updated>
+  <updated>2025-03-26T15:37:37.190Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Typora破解方式</title>
+    <link href="http://example.com/2025/03/26/Use-Typora/"/>
+    <id>http://example.com/2025/03/26/Use-Typora/</id>
+    <published>2025-03-25T16:00:00.000Z</published>
+    <updated>2025-03-26T15:37:37.190Z</updated>
+    
+    <content type="html"><![CDATA[<p>点击访问Typora官网 <a href="https://typoraio.cn/">https://typoraio.cn/</a></p><h2 id="1弹窗改为激活"><a class="markdownIt-Anchor" href="#1弹窗改为激活"></a> 1.弹窗改为激活</h2><p>找到安装目录<code>typora\resources\page-dist\static\js</code>下的<code>LicenseIndex.什么什么</code>文件</p><p>用记事本或者vs打开后，将<br /><code>e.hasActivated=&quot;true&quot;==e.hasActivated</code><br />替换为<br /><code>e.hasActivated=&quot;true&quot;==&quot;true&quot;</code></p><h2 id="2左下角未激活修改"><a class="markdownIt-Anchor" href="#2左下角未激活修改"></a> 2.左下角【未激活】修改</h2><p>找到文件位置<br /><code>Typora\resources\locales\zh-Hans.lproj\Panel.json</code></p><p>将<br /><code>&quot;UNREGISTERED&quot;:&quot;未激活&quot;</code><br />改为<br /><code>&quot;UNREGISTERED&quot;:&quot;&quot;</code></p><h2 id="3每次启动时的已激活弹窗"><a class="markdownIt-Anchor" href="#3每次启动时的已激活弹窗"></a> 3.每次启动时的已激活弹窗</h2><p>我自己没改，改了之后我软件闪退，有需要的话就改</p><p>找到文件位置<br /><code>resources\page-dist\license.html</code></p><p>用vs打开<br />查找<code>&lt;/body&gt;&lt;/html&gt;</code><br />替换为<code>&lt;/body&gt;&lt;script&gt;window.onload=function()&#123;setTimeout(()=&gt;&#123;window.();&#125;,5);&#125;&lt;/script&gt;&lt;/html&gt;</code></p><p>vs看一下<code>onload</code>是否会有框框住两个<code>o</code>，如果有就手打替换一下<code>o</code></p><p>之后就可以正常打开了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;点击访问Typora官网 &lt;a href=&quot;https://typoraio.cn/&quot;&gt;https://typoraio.cn/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1弹窗改为激活&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1弹窗改为激活&quot;&gt;&lt;/</summary>
+      
+    
+    
+    
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>01-Selenium网页自动化测试脚本笔记</title>
