@@ -233,11 +233,11 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">11</div>
+    <div class="sidebar-state-number">14</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
-    <div class="sidebar-state-number">0</div>
+    <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-tag">
     <div>标签</div>
@@ -298,38 +298,77 @@
 
           <section id="main">
   
+    <div class="post-categories-wrapper" data-aos="fade-up">
+      
+        
+        <div class="post-categories-wrap">
+          
+          <a class="post-link" href="/categories/MySQL" aria-label=""></a>
+          <div class="post-categories-cover">
+            
+              <img data-src="https://wx4.sinaimg.cn/mw2000/0026YIXUgy1i0d54k1hibj61hc11q4lp02.jpg" data-sizes="auto" alt="MySQL" class="lazyload">
+            
+            <h2>MySQL</h2>
+            <h3>5 篇文章</h3>
+          </div>
+        </div>
+        
+      
+        
+        <div class="post-categories-wrap">
+          
+          <a class="post-link" href="/categories/Golang" aria-label=""></a>
+          <div class="post-categories-cover">
+            
+              <img data-src="https://wx3.sinaimg.cn/mw2000/0026YIXUgy1hqo41q2sbvj61kw0x947b02.jpg" data-sizes="auto" alt="Golang" class="lazyload">
+            
+            <h2>Golang</h2>
+            <h3>4 篇文章</h3>
+          </div>
+        </div>
+        
+      
+    </div>
+  
   
     
     
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
     
-      <a class="post-link" href="/2025/05/12/Learn-mysql-02/" aria-label="02-MySQL基础整理（DQL、DCL部分）"></a>
+      <a class="post-link" href="/2025/05/18/Learn-mysql-05/" aria-label="05-MySQL基础整理（多表查询）"></a>
     
     
     <div class="post-cover-left">
       
-        
-        
-          <img data-src="/images/tiantai.png" data-sizes="auto" alt="02-MySQL基础整理（DQL、DCL部分）" class="lazyload">
-        
+        <img data-src="https://wx2.sinaimg.cn/mw2000/0026YIXUgy1hofp8xidf4j60rs0rin8y02.jpg" data-sizes="auto" alt="05-MySQL基础整理（多表查询）" class="lazyload">
       
     </div>
     <div class="post-info">
       <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-05-12</span>
-        <span><span class="icon-pencil"></span>715 字</span>
-        <span><span class="icon-clock"></span>2 分钟</span>
+        <span><span class="icon-calendar"></span>2025-05-18</span>
+        <span><span class="icon-pencil"></span>216 字</span>
+        <span><span class="icon-clock"></span>1 分钟</span>
       </div>
-      <h2 class="post-title">02-MySQL基础整理（DQL、DCL部分）</h2>
+      <h2 class="post-title">05-MySQL基础整理（多表查询）</h2>
       <article class="post-article">
         
           整理的笔记，方便后续查看复习用推荐书籍 《SQL必知必会》
-DQL-数据查询语言DQL-语法基本查询、条件查询（WHERE）、聚合函数（count max min avg sum）、分组查询（GROUP BY）、排序查询（ORDER BY）、分页查询（LIMIT）
-1234567891011121314SELECT    字段列表FROM    表名列表WHERE    条件列表GRUOP BY    分组字段列表HAVING    分组后条件列表ORDER BY    排序字段列表LIMIT    分页参数
+多表查询多表关系一对一：在任意一方加入外键，关联另一方的主键，并设置外键唯一（UNIQUE）一对多（多对一）：在多的乙方建立外键，指向一的一方多对多：建立第三张中间表，中间表至少包含两个外键，分别关联两方主键
+多表查询多表查询分类
 
-DQL-基本查询
-查询多个字段，*是通配符，影响效率，尽量不写SELECT 字段1
+连接查询：
+
+
+内连接：查询A、B交集部分数据
+外连接-左外连接：查询左表所有数据，以及两张表交集部分数据
+外连接-右外连接：查询右表所有数据，以及两张表交集部分数据
+自连接：查询表与自身的连接查询，自连接必须使用表别名
+
+
+子查询
+
+
         
       </article>
     </div>
@@ -340,15 +379,174 @@ DQL-基本查询
       <div class="post-wrapper">
   <div class="post-wrap-right" data-aos="fade-up">
     
-      <a class="post-link" href="/2025/05/10/Learn-mysql-01/" aria-label="01-MySQL基础整理（DDL、DML部分）"></a>
+      <a class="post-link" href="/2025/05/16/Learn-mysql-04/" aria-label="04-MySQL基础整理（约束）"></a>
     
     
     <div class="post-cover-right">
       
+        <img data-src="https://wx1.sinaimg.cn/mw2000/006AkgtYgy1hx37x81x7aj313d0trnga.jpg" data-sizes="auto" alt="04-MySQL基础整理（约束）" class="lazyload">
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-05-16</span>
+        <span><span class="icon-pencil"></span>605 字</span>
+        <span><span class="icon-clock"></span>2 分钟</span>
+      </div>
+      <h2 class="post-title">04-MySQL基础整理（约束）</h2>
+      <article class="post-article">
         
+          整理的笔记，方便后续查看复习用推荐书籍 《SQL必知必会》
+约束
+概念：约束是作用于表中字段上的规则，用于限制储存在表中的数据
+目的：保证数据库中数据的正确性、有效性和完整性
+分类：
+
+
+约束
+描述
+关键字
+
+
+
+非空约束
+限制该字段的数据不能为null
+NOT NULL
+
+
+唯一约束
+保证该字段的所有数据都是唯一、不重复的
+UNIQUE
+
+
+主键约束
+主键是一行数据的唯一标识，要求非空且唯一
+PRIMARY KEY
+
+
+默认约束
+保存数据时，如果未指定该字段的值，则采用默认值
+DEFAULT
+
+
+检查约束
+保证字段值满足某一个条件
+CHECK
+
+
+外键约束
+用于让两张表的数据之间建立连接，保
         
-          <img data-src="/images/tiantai.png" data-sizes="auto" alt="01-MySQL基础整理（DDL、DML部分）" class="lazyload">
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/05/14/Learn-mysql-03/" aria-label="03-MySQL基础整理（函数）"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        <img data-src="https://wx2.sinaimg.cn/mw2000/006AkgtYgy1i164poochyj30rk19yhbh.jpg" data-sizes="auto" alt="03-MySQL基础整理（函数）" class="lazyload">
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-05-14</span>
+        <span><span class="icon-pencil"></span>469 字</span>
+        <span><span class="icon-clock"></span>1 分钟</span>
+      </div>
+      <h2 class="post-title">03-MySQL基础整理（函数）</h2>
+      <article class="post-article">
         
+          整理的笔记，方便后续查看复习用推荐书籍 《SQL必知必会》
+函数字符串函数常用的字符串函数
+
+
+
+函数
+功能
+
+
+
+CONCAT(S1,S2,……Sn)
+字符串拼接，将S1,S2……Sn拼接成一个字符串
+
+
+LOWER(str)
+将字符串str全部转换成小写
+
+
+UPPER(str)
+将字符串str全部转换成大写
+
+
+LPAD(str,n,pad)
+左填充，用字符串pad对str的左边进行填充，达到n个字符串长度
+
+
+RPAD(str,n,pad)
+右填充，用字符串pad对str的右边进行填充，达到n个字符串长度
+
+
+TEIM(str)
+去掉字符串头部和尾部的空格
+
+
+SUBSTRING(st
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/05/12/Learn-mysql-02/" aria-label="02-MySQL基础整理（DQL、DCL部分）"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        <img data-src="https://wx4.sinaimg.cn/mw2000/001iVUoXly1i06y7x7mb7j618g0p0toa02.jpg" data-sizes="auto" alt="02-MySQL基础整理（DQL、DCL部分）" class="lazyload">
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-05-12</span>
+        <span><span class="icon-pencil"></span>983 字</span>
+        <span><span class="icon-clock"></span>3 分钟</span>
+      </div>
+      <h2 class="post-title">02-MySQL基础整理（DQL、DCL部分）</h2>
+      <article class="post-article">
+        
+          整理的笔记，方便后续查看复习用推荐书籍 《SQL必知必会》
+DQL-数据查询语言DQL-语法基本查询、条件查询（WHERE）、聚合函数（count max min avg sum）、分组查询（GROUP BY）、排序查询（ORDER BY）、分页查询（LIMIT）编写顺序↓
+1234567891011121314SELECT    字段列表FROM    表名列表WHERE    条件列表GRUOP BY    分组字段列表HAVING    分组后条件列表ORDER BY    排序字段列表LIMIT    分页参数
+
+DQL-基本查询
+查询多个字段，*是通配符，影响效率，尽量不写SELEC
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/05/10/Learn-mysql-01/" aria-label="01-MySQL基础整理（DDL、DML部分）"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        <img data-src="https://wx1.sinaimg.cn/large/006VdYIAly1hicd4o5axcj30jn0rsdm9.jpg" data-sizes="auto" alt="01-MySQL基础整理（DDL、DML部分）" class="lazyload">
       
     </div>
     <div class="post-info">
@@ -383,17 +581,14 @@ DDL-数据定义语言DDL-数据库操作
       
     
       <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
+  <div class="post-wrap-right" data-aos="fade-up">
     
       <a class="post-link" href="/2025/04/21/Learn-linux-01/" aria-label="01-Linux学习的一些笔记"></a>
     
     
-    <div class="post-cover-left">
+    <div class="post-cover-right">
       
-        
-        
-          <img data-src="/images/tiantai.png" data-sizes="auto" alt="01-Linux学习的一些笔记" class="lazyload">
-        
+        <img data-src="https://wx1.sinaimg.cn/large/70745653gy1i0wn2513lpj219c0pi16m.jpg" data-sizes="auto" alt="01-Linux学习的一些笔记" class="lazyload">
       
     </div>
     <div class="post-info">
@@ -416,17 +611,14 @@ windows系统装Linux系统：Windows Subsystem for Linux
       
     
       <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
+  <div class="post-wrap-left" data-aos="fade-up">
     
-      <a class="post-link" href="/2025/04/01/Learn_interview-01/" aria-label="自动化测试面试岗位面试笔记（还是干运维吧）"></a>
+      <a class="post-link" href="/2025/04/01/Learn_interview-01/" aria-label="自动化测试面试岗位面试笔记（还是干运维吧，废弃）"></a>
     
     
-    <div class="post-cover-right">
+    <div class="post-cover-left">
       
-        
-        
-          <img data-src="/images/tiantai.png" data-sizes="auto" alt="自动化测试面试岗位面试笔记（还是干运维吧）" class="lazyload">
-        
+        <img data-src="https://wx1.sinaimg.cn/large/a2601bcdgy1i1ffooln4uj218g0p0tst.jpg" data-sizes="auto" alt="自动化测试面试岗位面试笔记（还是干运维吧，废弃）" class="lazyload">
       
     </div>
     <div class="post-info">
@@ -435,7 +627,7 @@ windows系统装Linux系统：Windows Subsystem for Linux
         <span><span class="icon-pencil"></span>754 字</span>
         <span><span class="icon-clock"></span>2 分钟</span>
       </div>
-      <h2 class="post-title">自动化测试面试岗位面试笔记（还是干运维吧）</h2>
+      <h2 class="post-title">自动化测试面试岗位面试笔记（还是干运维吧，废弃）</h2>
       <article class="post-article">
         
           阿b视频笔记软件自动化测试常问面试题
@@ -453,12 +645,12 @@ windows系统装Linux系统：Windows Subsystem for Linux
       
     
       <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
+  <div class="post-wrap-right" data-aos="fade-up">
     
       <a class="post-link" href="/2025/03/26/Use-Typora/" aria-label="Typora破解方式"></a>
     
     
-    <div class="post-cover-left">
+    <div class="post-cover-right">
       
         
         
@@ -488,17 +680,14 @@ windows系统装Linux系统：Windows Subsystem for Linux
       
     
       <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
+  <div class="post-wrap-left" data-aos="fade-up">
     
       <a class="post-link" href="/2025/03/14/Learn-selenium-01/" aria-label="01-Selenium网页自动化测试脚本笔记（还是继续做运维了本篇废弃"></a>
     
     
-    <div class="post-cover-right">
+    <div class="post-cover-left">
       
-        
-        
-          <img data-src="/images/tiantai.png" data-sizes="auto" alt="01-Selenium网页自动化测试脚本笔记（还是继续做运维了本篇废弃" class="lazyload">
-        
+        <img data-src="https://wx1.sinaimg.cn/mw2000/0071VXkOgy1hx2zkjf3fkj31hc0u04ko.jpg" data-sizes="auto" alt="01-Selenium网页自动化测试脚本笔记（还是继续做运维了本篇废弃" class="lazyload">
       
     </div>
     <div class="post-info">
@@ -538,17 +727,14 @@ Seleni
       
     
       <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
+  <div class="post-wrap-right" data-aos="fade-up">
     
       <a class="post-link" href="/2025/01/03/Learn-go-04/" aria-label="04-Go语言基础之流程控制(哈哈我go从博客转力扣了，练习更新在力扣刷题和github)"></a>
     
     
-    <div class="post-cover-left">
+    <div class="post-cover-right">
       
-        
-        
-          <img data-src="/images/tiantai.png" data-sizes="auto" alt="04-Go语言基础之流程控制(哈哈我go从博客转力扣了，练习更新在力扣刷题和github)" class="lazyload">
-        
+        <img data-src="https://wx2.sinaimg.cn/large/006Jp6hMgy1hhx0wfcy9kj30sn14iats.jpg" data-sizes="auto" alt="04-Go语言基础之流程控制(哈哈我go从博客转力扣了，练习更新在力扣刷题和github)" class="lazyload">
       
     </div>
     <div class="post-info">
@@ -566,180 +752,6 @@ Go语言中最常用的流程控制有if和for，而switch和goto主要是为了
 if else(分支结构)if条件判断基本写法Go语言中if条件判断的格式如下：
 1234567if 表达式1 &amp;#123;    分支1&amp;#125; else if 表达式2 &amp;#123;    分支2&amp;#125; else&amp;#123;    分支3&amp;#125;
 当表达式1的结果为true时，执行分支1，否则判断表达式2，如果满足
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/01/03/Learn-go-03/" aria-label="03-Go语言基础之运算符"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="/images/tiantai.png" data-sizes="auto" alt="03-Go语言基础之运算符" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-01-03</span>
-        <span><span class="icon-pencil"></span>665 字</span>
-        <span><span class="icon-clock"></span>2 分钟</span>
-      </div>
-      <h2 class="post-title">03-Go语言基础之运算符</h2>
-      <article class="post-article">
-        
-          来源是b站Go语言基础04 运算符
-运算符用于在程序运行时执行数学或逻辑运算。
-运算符Go 语言内置的运算符有：
-
-算术运算符
-关系运算符
-逻辑运算符
-位运算符
-赋值运算符
-
-算术运算符
-
-
-运算符
-描述
-
-
-
-+
-相加
-
-
--
-相减
-
-
-*
-相乘
-
-
-/
-相除
-
-
-%
-求余
-
-
-
-注意：++（自增）和--（自减）在Go语言中是单独的语句，并不是运算符。
-
-关系运算符
-
-
-运算符
-描述
-
-
-
-==
-检查两个值是否相等，如果相等返回 True 否则返回 False。
-
-
-!=
-检查两个值是否不相等，如果不相等返回 True 否则返回 False。
-
-
-&amp;gt;
-检查左边值是否大于右边值，如果是返
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/01/02/Learn-go-02/" aria-label="02-Go语言基础之基本数据类型"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="/images/tiantai.png" data-sizes="auto" alt="02-Go语言基础之基本数据类型" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-01-02</span>
-        <span><span class="icon-pencil"></span>2.1k 字</span>
-        <span><span class="icon-clock"></span>8 分钟</span>
-      </div>
-      <h2 class="post-title">02-Go语言基础之基本数据类型</h2>
-      <article class="post-article">
-        
-          来源是b站Go语言基础03 基本数据类型
-Go语言中有丰富的数据类型，除了基本的整型、浮点型、布尔型、字符串外，还有数组、切片、结构体、函数、map、通道（channel）等。Go 语言的基本类型和其他语言大同小异。
-基本数据类型整型整型分为以下两个大类： 按长度分为：int8、int16、int32、int64 对应的无符号整型：uint8、uint16、uint32、uint64
-其中，uint8就是我们熟知的byte型，int16对应C语言中的short型，int64对应C语言中的long型。
-
-
-
-类型
-描述
-
-
-
-uint8
-无符号 8位整型 (0 到 255)
-
-
-uint16
-无
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/01/01/Learn-go-01/" aria-label="01-Go语言基础之变量和常量"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="/images/tiantai.png" data-sizes="auto" alt="01-Go语言基础之变量和常量" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-01-01</span>
-        <span><span class="icon-pencil"></span>1.8k 字</span>
-        <span><span class="icon-clock"></span>6 分钟</span>
-      </div>
-      <h2 class="post-title">01-Go语言基础之变量和常量</h2>
-      <article class="post-article">
-        
-          题外话：git部署本地hexo s 生成hexo g 部署hexo d
-来源是b站Go语言基础02 变量与常量
-变量和常量是编程中必不可少的部分，也是很好理解的一部分。
-标识符与关键字标识符在编程语言中标识符就是程序员定义的具有特殊意义的词，比如变量名、常量名、函数名等等。 Go语言中标识符由字母数字和_(下划线）组成，并且只能以字母和_开头。 举几个例子：abc, _, _123, a123。
-关键字关键字是指编程语言中预先定义好的具有特殊含义的标识符。 关键字和保留字都不建议用作变量名。
-Go语言中有25个关键字：
-break        default      func       
         
       </article>
     </div>
@@ -785,10 +797,10 @@ break        default      func
     
       <div>
         <span class="icon-brush"></span>
-        10.8k
+        12.3k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:37
+        00:42
       </div>
     
     
@@ -824,11 +836,11 @@ break        default      func
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">11</div>
+    <div class="sidebar-state-number">14</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
-    <div class="sidebar-state-number">0</div>
+    <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-tag">
     <div>标签</div>
